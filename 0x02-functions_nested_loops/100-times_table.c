@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * times_table - print the 9 times table, starting with zero.
- *
+ * print_times_table - If n is greater than 15 or less than 0 the function should not print anything *
  */
 void print_times_table(int n)
 {
