@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * main - debugging example
@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-	char *holberton = "Holberton";
+	char *main = "main";
 
-	while (*holberton)
+	while (*main)
 	{
-		_putchar(*holberton);
-		holberton++;
+		_putchar(*main);
+		main++;
 	}
 	_putchar('\n');
 	return (0);
