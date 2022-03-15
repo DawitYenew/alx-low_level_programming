@@ -8,43 +8,46 @@
  */
 void print_times_table(int n)
 {
-	int x, y, mult, one, ten, hund;
+	int i, j, res;
 
-	x = 0;
-	if (n >= 0 && n <= 15)
+
+	if (!(n > 15 || n< 0))
 	{
-		while (x <= n)
+		for(i=0; i<=n ; i++)
 		{
-			y = 0;
-			while (y <= n)
+			for(j=0; j<=n; j++)
 			{
-				mult = x * y;
-				one = mult % 10;
-				ten = mult % 100 / 10;
-				hund = mult / 100;
-				if (hund == 0 && y != 0)
-				{
-					_putchar(' ');
-					if (ten == 0)
-						_putchar(' ');
-					else
-						_putchar(ten + '0');
-				}
-				else if (hund != 0)
-				{
-					_putchar(hund + '0');
-					_putchar(ten + '0');
-				}
-				_putchar(one + '0');
-				if (y != n)
+				res=(i * j);
+				if(j!=0)
 				{
 					_putchar(',');
 					_putchar(' ');
 				}
-				y++;
+				if(res < 10 && j != 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((res % 10) + '0');
+				}
+				else if(res >= 10 && res <100)
+				{
+					_putchar(' ');
+					_putchar((res / 10) + '0');
+					_putchar((res % 10) + '0');
+				}
+				else if(res >= 100 && i != 0)
+                                {
+                                        _putchar((res / 100) + '0');
+                                        _putchar((res / 10) % 10 + '0);
+                                        _putchar((res % 10) + '0');
+                                }
+				else
+					_putchar((res%10) + '0');
 			}
-			_putchar('\n');
-			x++;
+                        _putchar('\n');
 		}
 	}
 }
+			
+	
+
