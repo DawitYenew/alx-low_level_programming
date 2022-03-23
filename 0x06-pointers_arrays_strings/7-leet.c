@@ -17,13 +17,13 @@ char *leet(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < 5; j++)
-		{
+		
 			if (s[i] == ch1[j] || s[i] == ch2[j])
-			{
+			
 				s[i] = leetChar[j];
 				break;
-			}
-		}
+			
+		
 	}
 	return (s);
 }
