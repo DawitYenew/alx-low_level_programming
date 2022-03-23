@@ -21,10 +21,9 @@ char *leet(char *s)
 			if (s[i] == ch1[j] || s[i] == ch2[j])
 			{
 				s[i] = leetChar[j];
-				break;
 			}
 		}
 	}
-	return (0);
+	return (s);
 }
 
