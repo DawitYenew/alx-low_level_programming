@@ -10,15 +10,18 @@ char *leet(char *s)
 {
 	int i;
 	int j;
-	char l[] = "ol_ea__t";
-
+	char ch1[] = "aeotl";
+	char ch2[] = "AEOTL";
+	char leetChar = "43071";
+	
 	for (i = 0; s[i] != '\0'; i++)
-	{i
-		for (j = 0; l[j] != '\0'; j++)
+	{
+		for (j = 0; j < 5; j++)
 		{
-			if (s[i] == l[j] || s[i] == (l[j] - 32))
+			if (s[i] == ch1[j] || s[i] == ch2[j])
 			{
-				s[i] = j + '0';
+				s[i] = leetChar[j];
+				break;
 			}
 		}
 	}
