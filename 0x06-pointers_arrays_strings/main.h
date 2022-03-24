@@ -12,5 +12,5 @@ extern void print_diagonal(int n);
 extern void print_square(int size);
 extern void print_triangle(int size);
 extern void print_number(int n);
-extern void char *infinite_add(char *n1, char *n2, char *r, int size_r);
+extern char *infinite_add(char *n1, char *n2, char *r, int size_r);
 #endif
